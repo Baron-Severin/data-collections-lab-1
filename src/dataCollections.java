@@ -83,8 +83,8 @@ public class dataCollections {
 				for (int j = 0; j < itemP.length; j++) {
 					item += (itemP[j].substring(0, 1).toUpperCase() + itemP[j].substring(1).toLowerCase() + " ");
 				}
-				System.out.println("#" + (i + 1) + ": " + item);
-			}
+
+			}System.out.println("#" + (i + 1) + ": " + item);
 		}
   }
   //	Write a function for a home screen to welcome users to Diannas every time they insert a command. The screen should contain the name "Dianna's Dinosaur & Donut Emporium" and the list of possible commands (Help gives a more detailed explanation).
