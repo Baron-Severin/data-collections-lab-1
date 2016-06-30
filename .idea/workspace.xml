@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6a9d90c-39dc-4d1b-a7eb-60c03361c595" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dataCollections.java" afterPath="$PROJECT_DIR$/src/dataCollections.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/data-collections-lab/dataCollections.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/data-collections-lab/testclass.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="data-collections-lab.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +29,8 @@
       <file leaf-file-name="dataCollections.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dataCollections.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="80" column="31" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+            <state relative-caret-position="443">
+              <caret line="99" column="40" selection-start-line="99" selection-start-column="40" selection-end-line="99" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -441,8 +443,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/dataCollections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="80" column="31" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+        <state relative-caret-position="443">
+          <caret line="99" column="40" selection-start-line="99" selection-start-column="40" selection-end-line="99" selection-end-column="40" />
           <folding />
         </state>
       </provider>
