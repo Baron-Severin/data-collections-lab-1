@@ -1,6 +1,7 @@
 import com.sun.deploy.util.StringUtils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
@@ -8,7 +9,8 @@ import java.util.Scanner;
  * Created by mgkan on 2016-06-29.
  */
 public class dataCollections {
-	static ArrayList<String> products = new ArrayList<>();
+  static String[] nameW = {"dog","cat","sun","Moon Walk","How are you"};
+	static ArrayList<String> products = new ArrayList<>(Arrays.asList(nameW));
 	public static void main(String[] args) {
 	while(true) {
 		homeScreen();
@@ -16,7 +18,7 @@ public class dataCollections {
 		if (name.contains("add")) {
 			addProduct(name);
 		} else if (name.contains("list")) {
-			listProduct(products);
+			listProduct();
 		} else if (name.contains("delete")) {
 			removeProduct(name);
 		} else if (name.contains("help")) {
@@ -30,7 +32,7 @@ public class dataCollections {
 
 	//	Write a function that will allow a user to add Dinosaur or Donut products to the inventory when they type in "Add". For example: "Add Creme Filled Dino Donut" should add the string "Creme Filled Dino Donut" to the inventory.
 	public static void addProduct(String userInput) {
-	 if(userInput.charAt(3) !=' ' && userInput.length()>3){
+	 if(userInput.length()>3 && userInput.charAt(3) !=' '){
 		String item = userInput.substring(3);
 		System.out.println(item + " is added to the inventory");
 		products.add(item);
@@ -45,7 +47,7 @@ public class dataCollections {
 	//	Write a function that removes a product from the inventory when they type in "Delete". For example: "Delete 3" should remove the third item in the collection (not the fourth!).
 	public static void removeProduct(String userInput){
 		try {
-			if (userInput.charAt(6) != ' ' && userInput.length() > 6) {
+			if (userInput.length() > 6 && userInput.charAt(6) != ' ') {
 				String item = userInput.substring(6);
 				int x = Integer.parseInt(item);
 				if (x >= 0 && x <= products.size()) {
@@ -72,18 +74,25 @@ public class dataCollections {
 		System.out.println("IF YOU DID NOT GET A CONFIRMATION PROMPT, THE CHANGE DID NOT HAPPEN.");
 	}
   //	Write a function that will allow a user to see the list of contents of the inventory of the Emporium when they type in "List". Make sure the list is sorted so they can find what they want! Make sure that the first letter of each word is capitalized and every other letter is lowercase. We want to make sure everything looks great for Dianna!
-  public static void listProduct(ArrayList<String> a){
+  public static void listProduct(){
   	if(products.isEmpty()==true){
 			System.out.println("The inventory is empty");
 		}else {
-			Collections.sort(products);
-			for (int i = 0; i < a.size(); i++) {
-				String item = a.get(i);
-				String[] itemP = item.split(" ");
+			ArrayList<String> inven = new ArrayList<>();
+			for (int i = 0; i < products.size(); i++) {
+				String item = "";
+				String[] itemP = products.get(i).split(" ");
 				for (int j = 0; j < itemP.length; j++) {
-					item += (itemP[j].substring(0, 1).toUpperCase() + itemP[j].substring(1).toLowerCase() + " ");
+				  if(itemP[j].length()>0) {
+						item += (itemP[j].substring(0, 1).toUpperCase() + itemP[j].substring(1).toLowerCase() + " ");
+					}
 				}
-				System.out.println("#" + (i + 1) + ": " + item);
+				inven.add(item);
+
+			}
+			Collections.sort(inven);
+			for(String item:inven) {
+				System.out.println(item);
 			}
 		}
   }
